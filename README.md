@@ -4,7 +4,7 @@ Add some formatting option in your Discourse composer : underline, center, align
 
 For more informations, see : 
 
-- English : https://meta.discourse.org/
+- English : https://meta.discourse.org/t/md-composer-extras/118912
 - Français : https://www.mon-discourse.fr/themes/md-composer-extras/
 
 <br>
