@@ -16,7 +16,7 @@ api.onToolbarCreate(toolbar => {
         id: "align_center_button",
         group: "extras",
         icon: "align-center",
-        perform: e => e.applySurround('<div align="center">', '</div>', 'align_center_text')
+        perform: e => e.applySurround('<div align="center">\n\n', '\n</div>', 'align_center_text')
     });
 });
 api.onToolbarCreate(toolbar => {
@@ -24,7 +24,7 @@ api.onToolbarCreate(toolbar => {
         id: "align_right_button",
         group: "extras",
         icon: "align-right",
-        perform: e => e.applySurround('<div align="right">', '</div>', 'align_right_text')
+        perform: e => e.applySurround('<div align="right">\n\n', '\n</div>', 'align_right_text')
     });
 });
 api.onToolbarCreate(toolbar => {
@@ -32,7 +32,7 @@ api.onToolbarCreate(toolbar => {
         id: "align_justify_button",
         group: "extras",
         icon: "align-justify",
-        perform: e => e.applySurround('<div align="justify">', '</div>', 'align_justify_text')
+        perform: e => e.applySurround('<div align="justify">\n\n', '\n</div>', 'align_justify_text')
     });
 });
 
