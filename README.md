@@ -9,6 +9,10 @@ For more informations, see :
 
 <br>
 
+Wrap support by thw26 : https://github.com/thw26
+
+<br>
+
 I took some parts of the Iconified Header Links and Slick Image Gallery theme components made by Johani : 
 
 https://meta.discourse.org/t/iconified-header-links/86307 (adding fa5 icons in the theme component)
