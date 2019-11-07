@@ -1,5 +1,7 @@
 <script type="text/discourse-plugin" version="0.8">
 const { iconNode } = require("discourse-common/lib/icon-library");
+
+
 // TOOLBAR
 api.onToolbarCreate(toolbar => {
     toolbar.addButton({
@@ -33,6 +35,8 @@ api.onToolbarCreate(toolbar => {
         perform: e => e.applySurround('[wrap="justify"]\n', '\n[/wrap]', 'align_justify_text')
     });
 });
+
+
 // EXTRAS
 api.addToolbarPopupMenuOptionsCallback(() => {
   return {
@@ -48,6 +52,8 @@ api.modifyClass("controller:composer", {
     },
   }
 });
+
+
 // TEXTS
 let translations = I18n.translations[I18n.currentLocale()].js;
 if (!translations) {
