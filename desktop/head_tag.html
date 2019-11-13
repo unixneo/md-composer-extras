@@ -11,6 +11,30 @@ api.onToolbarCreate(toolbar => {
 });
 api.onToolbarCreate(toolbar => {
     toolbar.addButton({
+        id: "strikethrough_button",
+        group: "fontStyles",
+        icon: "strikethrough",
+		perform: e => e.applySurround('<s>', '[/s]', 'strikethrough_text')
+    });
+});
+api.onToolbarCreate(toolbar => {
+    toolbar.addButton({
+        id: "superscript_button",
+        group: "fontStyles",
+        icon: "superscript",
+		perform: e => e.applySurround('<sup>', '</sup>', 'superscript_text')
+    });
+});
+api.onToolbarCreate(toolbar => {
+    toolbar.addButton({
+        id: "subscript_button",
+        group: "fontStyles",
+        icon: "subscript",
+		perform: e => e.applySurround('<sub>', '</sub>', 'subscript_text')
+    });
+});
+api.onToolbarCreate(toolbar => {
+    toolbar.addButton({
         id: "align_center_button",
         group: "extras",
         icon: "align-center",
@@ -37,27 +61,6 @@ api.onToolbarCreate(toolbar => {
 // EXTRAS
 api.addToolbarPopupMenuOptionsCallback(() => {
   return {
-      action: "strikethrough",
-      icon: "strikethrough",
-      label: "strikethrough_button"
-  };
-});
-api.addToolbarPopupMenuOptionsCallback(() => {
-  return {
-      action: "superscript",
-      icon: "superscript",
-      label: "superscript_button"
-  };
-});
-api.addToolbarPopupMenuOptionsCallback(() => {
-  return {
-      action: "subscript",
-      icon: "subscript",
-      label: "subscript_button"
-  };
-});
-api.addToolbarPopupMenuOptionsCallback(() => {
-  return {
       action: "floatleft",
       icon: "indent",
       label: "float_left_button"
@@ -74,14 +77,6 @@ api.addToolbarPopupMenuOptionsCallback(() => {
 api.modifyClass("controller:composer", {
   actions: {
     strikethrough() {
-      this.get("toolbarEvent").applySurround("<s>", "</s>", "strikethrough_text");
-    },
-	superscript() {
-      this.get("toolbarEvent").applySurround("<sup>", "</sub>", "superscript_text");
-    },
-    subscript() {
-      this.get("toolbarEvent").applySurround("<sub>", "</sub>", "subscript_text");
-    },
     floatleft() {
       this.get("toolbarEvent").applySurround('[wrap="floatl"]\n', '\n[/wrap]', "float_left_text");
     },
@@ -116,15 +111,15 @@ translations.composer.align_justify_button_title = settings.align_justify_button
 translations.composer.align_justify_text =
   settings.align_justify_text;
 
-translations.strikethrough_button = settings.strikethrough_button;
+translations.composer.strikethrough_button = settings.strikethrough_button;
 translations.composer.strikethrough_text =
   settings.strikethrough_text;
 
-translations.superscript_button = settings.superscript_button;
+translations.composer.superscript_button = settings.superscript_button;
 translations.composer.superscript_text =
   settings.superscript_text;
 
-translations.subscript_button = settings.subscript_button;
+translations.composer.subscript_button = settings.subscript_button;
 translations.composer.subscript_text =
   settings.subscript_text;
 
