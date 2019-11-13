@@ -62,7 +62,6 @@ subscript_text:
   default: "Text"
   description:
     en: Enter the placeholder text that appears in the composer after the user clicks the button.
-
 columns_button:
   default: "Columns"
   description:
