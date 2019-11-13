@@ -60,13 +60,6 @@ api.addToolbarPopupMenuOptionsCallback(() => {
       label: "float_left_button"
   };
 });
-api.addToolbarPopupMenuOptionsCallback(() => {
-  return {
-      action: "columns",
-      icon: "columns",
-      label: "columns_button"
-  };
-});
 
 api.modifyClass("controller:composer", {
   actions: {
@@ -90,10 +83,7 @@ api.modifyClass("controller:composer", {
     },
     floatleft() {
       this.get("toolbarEvent").applySurround('[wrap="floatl"]\n', '\n[/wrap]', "float_left_text");
-    },
-	columns() {
-	  this.get("toolbarEvent").applySurround('[wrap="columns"]\n', '\n[/wrap]', "columns_text");
-	}
+    }
   }
 });
 
