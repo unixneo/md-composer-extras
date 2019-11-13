@@ -34,7 +34,7 @@ strikethrough_button:
   default: "Strike-through"
   description:
     en: Enter the text for the title of the button in the composer.
-strikethrough_prompt:
+strikethrough_text:
   default: "Text"
   description:
     en: Enter the placeholder text that appears in the composer after the user clicks the button.
@@ -46,6 +46,23 @@ float_left_text:
   default: "Text"
   description:
     en: Enter the placeholder text that appears in the composer after the user clicks the button.
+superscript_button:
+  default: "Superscript"
+  description:
+    en: Enter the text for the title of the button in the composer.
+superscript_text:
+  default: "Text"
+  description:
+    en: Enter the placeholder text that appears in the composer after the user clicks the button.
+subscript_button:
+  default: "Subscript"
+  description:
+    en: Enter the text for the title of the button in the composer.
+subscript_text:
+  default: "Text"
+  description:
+    en: Enter the placeholder text that appears in the composer after the user clicks the button.
+
 columns_button:
   default: "Columns"
   description:
@@ -58,6 +75,6 @@ columns_text:
 Svg_icons: 
   type: 'list'
   list_type: 'compact'
-  default: 'fa-align-center|fa-align-right|fa-align-justify|fa-strikethrough|fa-underline|fa-indent|fa-columns'
+  default: 'fa-align-center|fa-align-right|fa-align-justify|fa-strikethrough|fa-underline|fa-indent|fa-columns|fa-superscript|fa-subscript'
   description: 
     en: "Include FontAwesome 5 icon classes for each icon used in the list."
