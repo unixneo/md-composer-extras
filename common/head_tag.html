@@ -1,7 +1,5 @@
 <script type="text/discourse-plugin" version="0.8">
 const { iconNode } = require("discourse-common/lib/icon-library");
-
-
 // TOOLBAR
 api.onToolbarCreate(toolbar => {
     toolbar.addButton({
@@ -9,6 +7,14 @@ api.onToolbarCreate(toolbar => {
         group: "fontStyles",
         icon: "underline",
         perform: e => e.applySurround('[u]', '[/u]', 'underline_text')
+    });
+});
+api.onToolbarCreate(toolbar => {
+    toolbar.addButton({
+        id: "strikethrough_button",
+        group: "fontStyles",
+        icon: "strikethrough",
+        perform: e => e.applySurround('<s>', '</s>', 'strikethrough_prompt')
     });
 });
 api.onToolbarCreate(toolbar => {
@@ -35,25 +41,22 @@ api.onToolbarCreate(toolbar => {
         perform: e => e.applySurround('[wrap="justify"]\n', '\n[/wrap]', 'align_justify_text')
     });
 });
-
-
-// EXTRAS
-api.addToolbarPopupMenuOptionsCallback(() => {
-  return {
-      action: "strikethrough",
-      icon: "strikethrough",
-      label: "strikethrough_button"
-  };
+api.onToolbarCreate(toolbar => {
+    toolbar.addButton({
+        id: "columns_button",
+        group: "extras",
+        icon: "columns",
+        perform: e => e.applySurround('[wrap="columns"]\n', '\n[/wrap]', 'columns_text')
+    });
 });
-api.modifyClass("controller:composer", {
-  actions: {
-    strikethrough() {
-      this.get("toolbarEvent").applySurround("<s>", "</s>", "strikethrough_prompt");
-    },
-  }
+api.onToolbarCreate(toolbar => {
+    toolbar.addButton({
+        id: "float_left_button",
+        group: "extras",
+        icon: "indent",
+        perform: e => e.applySurround('[wrap="floatl"]\n', '\n[/wrap]', 'float_left_text')
+    });
 });
-
-
 // TEXTS
 let translations = I18n.translations[I18n.currentLocale()].js;
 if (!translations) {
@@ -69,16 +72,19 @@ translations.composer.underline_text =
 translations.composer.align_center_button_title = settings.align_center_button;
 translations.composer.align_center_text =
   settings.align_center_text;
-
 translations.composer.align_right_button_title = settings.align_right_button;
 translations.composer.align_right_text =
   settings.align_right_text;
-
 translations.composer.align_justify_button_title = settings.align_justify_button;
 translations.composer.align_justify_text =
   settings.align_justify_text;
-
 translations.strikethrough_button = settings.strikethrough_button;
 translations.composer.strikethrough_prompt =
   settings.strikethrough_prompt;
+translations.composer.columns_button_title = settings.columns_button;
+translations.composer.columns_text =
+  settings.columns_text;
+translations.composer.float_left_button_title = settings.float_left_button;
+translations.composer.float_left_text =
+  settings.float_left_text;
 </script>
