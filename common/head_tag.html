@@ -11,14 +11,6 @@ api.onToolbarCreate(toolbar => {
 });
 api.onToolbarCreate(toolbar => {
     toolbar.addButton({
-        id: "strikethrough_button",
-        group: "fontStyles",
-        icon: "strikethrough",
-        perform: e => e.applySurround('<s>', '</s>', 'strikethrough_text')
-    });
-});
-api.onToolbarCreate(toolbar => {
-    toolbar.addButton({
         id: "align_center_button",
         group: "extras",
         icon: "align-center",
@@ -43,6 +35,13 @@ api.onToolbarCreate(toolbar => {
 });
 
 // EXTRAS
+api.addToolbarPopupMenuOptionsCallback(() => {
+  return {
+      action: "strikethrough",
+      icon: "strikethrough",
+      label: "strikethrough_button"
+  };
+});
 api.addToolbarPopupMenuOptionsCallback(() => {
   return {
       action: "floatleft",
@@ -71,8 +70,12 @@ api.addToolbarPopupMenuOptionsCallback(() => {
       label: "subscript_button"
   };
 });
+
 api.modifyClass("controller:composer", {
   actions: {
+    strikethrough() {
+      this.get("toolbarEvent").applySurround("<s>", "</s>", "strikethrough_prompt");
+    },
     floatleft() {
       this.get("toolbarEvent").applySurround('[wrap="floatl"]\n', '\n[/wrap]', "float_left_text");
     },
@@ -83,7 +86,7 @@ api.modifyClass("controller:composer", {
 	  this.get("toolbarEvent").applySurround("<sup>", "</sub>", "superscript_text");
 	},
 	subscript() {
-      this.get("toolbarEvent").applySurround("<sub>", "</sub>", "suvscript_text");
+      this.get("toolbarEvent").applySurround("<sub>", "</sub>", "subscript_text");
     }
   }
 });
