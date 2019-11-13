@@ -74,7 +74,7 @@ api.addToolbarPopupMenuOptionsCallback(() => {
 api.modifyClass("controller:composer", {
   actions: {
     strikethrough() {
-      this.get("toolbarEvent").applySurround("<s>", "</s>", "strikethrough_prompt");
+      this.get("toolbarEvent").applySurround("<s>", "</s>", "strikethrough_text");
     },
     floatleft() {
       this.get("toolbarEvent").applySurround('[wrap="floatl"]\n', '\n[/wrap]', "float_left_text");
