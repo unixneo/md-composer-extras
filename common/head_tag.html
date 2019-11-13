@@ -76,18 +76,18 @@ api.modifyClass("controller:composer", {
     strikethrough() {
       this.get("toolbarEvent").applySurround("<s>", "</s>", "strikethrough_text");
     },
+	superscript() {
+      this.get("toolbarEvent").applySurround("<sup>", "</sub>", "superscript_text");
+    },
+    subscript() {
+      this.get("toolbarEvent").applySurround("<sub>", "</sub>", "subscript_text");
+    },
     floatleft() {
       this.get("toolbarEvent").applySurround('[wrap="floatl"]\n', '\n[/wrap]', "float_left_text");
     },
 	columns() {
 	  this.get("toolbarEvent").applySurround('[wrap="columns"]\n', '\n[/wrap]', "columns_text");
-	},
-	superscript() {
-	  this.get("toolbarEvent").applySurround("<sup>", "</sub>", "superscript_text");
-	},
-	subscript() {
-      this.get("toolbarEvent").applySurround("<sub>", "</sub>", "subscript_text");
-    }
+	}
   }
 });
 
@@ -116,23 +116,23 @@ translations.composer.align_justify_button_title = settings.align_justify_button
 translations.composer.align_justify_text =
   settings.align_justify_text;
 
-translations.strikethrough_button_title = settings.strikethrough_button;
+translations.strikethrough_button = settings.strikethrough_button;
 translations.composer.strikethrough_text =
   settings.strikethrough_text;
 
-translations.superscript_button_title = settings.superscript_button;
+translations.superscript_button = settings.superscript_button;
 translations.composer.superscript_text =
   settings.superscript_text;
 
-translations.subscript_button_title = settings.subscript_button;
+translations.subscript_button = settings.subscript_button;
 translations.composer.subscript_text =
   settings.subscript_text;
 
-translations.composer.columns_button_title = settings.columns_button;
+translations.composer.columns_button = settings.columns_button;
 translations.composer.columns_text =
   settings.columns_text;
 
-translations.composer.float_left_button_title = settings.float_left_button;
+translations.composer.float_left_button = settings.float_left_button;
 translations.composer.float_left_text =
   settings.float_left_text;
  
