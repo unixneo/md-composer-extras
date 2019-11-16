@@ -6,7 +6,7 @@
   margin-right: 5px;
 }
 
-[data-wrap="columns"] > p {
+[data-wrap="columns"] > p, [data-wrap="floatl"] > p, [data-wrap="floatr"] > p {
     margin-top: 0;
     margin-bottom: 0;
 }
