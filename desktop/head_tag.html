@@ -14,7 +14,7 @@ api.onToolbarCreate(toolbar => {
         id: "strikethrough_button",
         group: "fontStyles",
         icon: "strikethrough",
-		perform: e => e.applySurround('<s>', '[/s]', 'strikethrough_text')
+		perform: e => e.applySurround('<s>', '</s>', 'strikethrough_text')
     });
 });
 api.onToolbarCreate(toolbar => {
@@ -110,15 +110,15 @@ translations.composer.align_justify_button_title = settings.align_justify_button
 translations.composer.align_justify_text =
   settings.align_justify_text;
 
-translations.composer.strikethrough_button = settings.strikethrough_button;
+translations.composer.strikethrough_button_title = settings.strikethrough_button;
 translations.composer.strikethrough_text =
   settings.strikethrough_text;
 
-translations.composer.superscript_button = settings.superscript_button;
+translations.composer.superscript_button_title = settings.superscript_button;
 translations.composer.superscript_text =
   settings.superscript_text;
 
-translations.composer.subscript_button = settings.subscript_button;
+translations.composer.subscript_button_title = settings.subscript_button;
 translations.composer.subscript_text =
   settings.subscript_text;
 
