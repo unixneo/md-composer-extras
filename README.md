@@ -11,14 +11,19 @@ This Discourse theme component adds formatting options to your Discourse compose
 - justify
 - float left
 - float right
-- columns
+- columns.
 
-Added by Neo:
+Added by Neo (Desktop):
 
 - icode (inline)
 - code (block, text highlighting)
 - noparse (block)
 - noparse (inline).
+
+Added by Neo (Mobile):
+
+- icode (inline)
+- code (block, text highlighting).
 
 These additions are responsive for desktops and phones, but not for horizon orientation or tablets. These additions have taken into consideration [Slick](https://github.com/discourse/Discourse-Slick-image-gallery), [Tiles](https://github.com/discourse/Discourse-Tiles-image-gallery), and [Events](https://github.com/angusmcleod/discourse-events) when determining what should be placed on the composer bar or in the composer pop out menu.
 

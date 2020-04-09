@@ -1,9 +1,11 @@
-#reply-control .d-editor-button-bar .bullet, #reply-control .d-editor-button-bar .list, #reply-control .d-editor-button-bar .align_justify_button{
-    display: none;
+#reply-control .d-editor-button-bar .bullet,
+#reply-control .d-editor-button-bar .list,
+#reply-control .d-editor-button-bar .align_justify_button {
+  display: none;
 }
 
 .d-editor-spacer {
-    margin: 0 2px;
+  margin: 0 2px;
 }
 
 [data-wrap="columns"] {
@@ -15,3 +17,6 @@
 [data-wrap="floatr"] {
 }
 
+.fa-terminal {
+  font-size: 1.3em !important;
+}
