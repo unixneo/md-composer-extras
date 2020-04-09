@@ -1,3 +1,39 @@
+enable_subset:
+  default: false
+  description:
+    en: Enabled subscript and superscript buttons.
+noparseinline_button:
+  default: "Inline No Parse"
+  description:
+    en: Enter the button code for the noparse inline button in the composer.
+noparseinline_text:
+  default: "Not Parsed Inline"
+  description:
+    en: Enter the placeholder for noparse inline that appears in the composer after the user clicks the button.
+noparse_button:
+  default: "No Parse"
+  description:
+    en: Enter the block code  for the noparse button in the composer.
+noparse_text:
+  default: "Not Parsed Code Block"
+  description:
+    en: Enter the placeholder noparse block code that appears in the composer after the user clicks the button.
+code_button:
+  default: "Code"
+  description:
+    en: Enter the block code for the title of the button in the composer.
+code_text:
+  default: "Block Code"
+  description:
+    en: Enter the placeholder block code that appears in the composer after the user clicks the button.
+inline_button:
+  default: "ICode"
+  description:
+    en: Enter the icode for the title of the button in the composer neo.
+inline_text:
+  default: "Text"
+  description:
+    en: Enter the placeholder inline icode that appears in the composer after the user clicks the button.
 underline_button:
   default: "Underline"
   description:
@@ -71,9 +107,9 @@ columns_text:
   description:
     en: Enter the placeholder text that appears in the composer after the user clicks the button.
 
-Svg_icons: 
-  type: 'list'
-  list_type: 'compact'
-  default: 'fa-align-center|fa-align-right|fa-align-justify|fa-strikethrough|fa-underline|fa-indent|fa-columns|fa-superscript|fa-subscript'
-  description: 
+Svg_icons:
+  type: "list"
+  list_type: "compact"
+  default: "fa-not-equal|fa-ban|fa-laptop-code|fa-terminal|fa-align-center|fa-align-right|fa-align-justify|fa-strikethrough|fa-underline|fa-indent|fa-columns|fa-superscript|fa-subscript"
+  description:
     en: "Include FontAwesome 5 icon classes for each icon used in the list."
