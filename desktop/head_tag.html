@@ -111,6 +111,7 @@
     });
 
     api.modifyClass("controller:composer", {
+      pluginId: 'md-composer-extras-neo', 
       actions: {
         floatleft() {
           this.get("toolbarEvent").applySurround('[wrap="floatl"]\n', '\n[/wrap]', "float_left_text");
