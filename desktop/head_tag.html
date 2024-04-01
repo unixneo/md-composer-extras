@@ -95,20 +95,38 @@
     });
 
     // EXTRAS
-    api.addToolbarPopupMenuOptionsCallback(() => {
-      return {
-          action: "floatleft",
-          icon: "indent",
-          label: "float_left_button"
-      };
+    api.addComposerToolbarPopupMenuOption({
+      action: (toolbarEvent) => {
+        toolbarEvent.applySurround('[wrap="floatl"]\n', '\n[/wrap]', "float_left_text");
+      },
+      icon: 'indent',
+      label: 'float_left_button',
     });
-    api.addToolbarPopupMenuOptionsCallback(() => {
-      return {
-          action: "columns",
-          icon: "columns",
-          label: "columns_button"
-      };
+    
+    api.addComposerToolbarPopupMenuOption({
+      action: (toolbarEvent) => {
+        toolbarEvent.applySurround('[wrap="columns"]\n', '\n[/wrap]', "columns_text");
+      },
+      icon: 'columns',
+      label: 'columns_button',
     });
+    
+    /*
+        api.addToolbarPopupMenuOptionsCallback(() => {
+          return {
+              action: "floatleft",
+              icon: "indent",
+              label: "float_left_button"
+          };
+        });
+        api.addToolbarPopupMenuOptionsCallback(() => {
+          return {
+              action: "columns",
+              icon: "columns",
+              label: "columns_button"
+          };
+    });
+    */
 
     api.modifyClass("controller:composer", {
       pluginId: 'md-composer-extras-neo', 
