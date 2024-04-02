@@ -81,6 +81,7 @@
      });
 
      api.modifyClass("controller:composer", {
+       pluginId: 'md-composer-extras-neo',
        actions: {
          strikethrough() {
            this.get("toolbarEvent").applySurround("<s>", "</s>", "strikethrough_text");
