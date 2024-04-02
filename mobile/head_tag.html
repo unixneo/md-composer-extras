@@ -29,6 +29,66 @@
 
 
      // EXTRAS
+
+     api.addComposerToolbarPopupMenuOption({
+      action: (toolbarEvent) => {
+        toolbarEvent.applySurround('[wrap="floatl"]\n', '\n[/wrap]', "strikethrough");
+      },
+      icon: 'strikethrough',
+      label: 'strikethrough_button',
+    });
+    
+    api.addComposerToolbarPopupMenuOption({
+      action: (toolbarEvent) => {
+        toolbarEvent.applySurround('[wrap="columns"]\n', '\n[/wrap]', "superscript");
+      },
+      icon: 'superscript',
+      label: 'superscript_button',
+    });
+      
+    api.addComposerToolbarPopupMenuOption({
+      action: (toolbarEvent) => {
+        toolbarEvent.applySurround('[wrap="columns"]\n', '\n[/wrap]', "subscript");
+      },
+      icon: 'subscript',
+      label: 'subscript_button',
+    });
+    
+     api.addComposerToolbarPopupMenuOption({
+      action: (toolbarEvent) => {
+        toolbarEvent.applySurround('[wrap="floatl"]\n', '\n[/wrap]', "aligncenter");
+      },
+      icon: 'align-center',
+      label: 'align_center_button',
+    });
+
+    api.addComposerToolbarPopupMenuOption({
+      action: (toolbarEvent) => {
+        toolbarEvent.applySurround('[wrap="columns"]\n', '\n[/wrap]', "alignright");
+      },
+      icon: 'align-right',
+      label: 'align_right_button',
+    });
+      
+    api.addComposerToolbarPopupMenuOption({
+      action: (toolbarEvent) => {
+        toolbarEvent.applySurround('[wrap="columns"]\n', '\n[/wrap]', "alignjustify");
+      },
+      icon: 'align-justify',
+      label: 'align_justify_button',
+    });
+    
+     api.addComposerToolbarPopupMenuOption({
+      action: (toolbarEvent) => {
+        toolbarEvent.applySurround('[wrap="floatl"]\n', '\n[/wrap]', "floatleft");
+      },
+      icon: 'indent',
+      label: 'float_left_button',
+    });
+   
+   
+    /*
+     
      api.addToolbarPopupMenuOptionsCallback(() => {
        return {
            action: "strikethrough",
@@ -43,6 +103,7 @@
            label: "superscript_button"
        };
      });
+
      api.addToolbarPopupMenuOptionsCallback(() => {
        return {
            action: "subscript",
@@ -79,6 +140,8 @@
            label: "float_left_button"
        };
      });
+
+     */
 
      api.modifyClass("controller:composer", {
        pluginId: 'md-composer-extras-neo',
